@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charaset="UTF-8">
+    <title>Dark & light theme</title>
+    <style>
+      body{
+
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 50px;
+        transition: background-color 0.4s,color 0.4s;
+      }
+
+      .container{
+        max-width: 500px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(0 0 0.1);
+        text-align: center;
+
+      }
+
+      .theme_change{
+        padding: 12px 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+      }
+
+      .theme_change:hover{
+        background-color: #0056b3;
+      }
+
+      .dark-theme{
+        background-color: #121212;
+        color: white;
+      }
+
+      .dark-theme .container{
+        background-color: #1e1e1e;
+        box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      }
+
+      .dark-theme .theme_change{
+        background-color: #ffa500;
+        color: black;
+
+      }
+
+      .dark-theme .theme_change:hover{
+        background-color: #e69600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><u><i><b>Theme Toggling</b></i></u></h1>
+    
+      <label >click the button to change theme</label>
+      <button type="button" class="theme_change" onclick="ChangeTheme()">Change Theme</button>
+    </div>
+
+    <script>
+
+      function ChangeTheme(){
+        const body=document.body;
+        const btn=document.querySelector(".theme_change");
+
+
+        body.classList.toggle('dark-theme');
+
+        if(body.classList.contains('dark-theme')){
+          btn.textContent="Light Mode";
+        }else{
+          btn.textContent="Dark Mode";
+        }
+
+      }
+    </script>
+
+
+  </body>
+</html>
