@@ -25,7 +25,5 @@ This is a simple yet elegant project that allows users to switch between **Dark 
 - ✅ CSS3  
 - ✅ JavaScript (Vanilla)
 
----
 
-## 📁 Folder Structure
 
